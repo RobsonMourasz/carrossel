@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body, html{
+    height: 100%;
+}
+
+body{
+    background-image: url('..//assets/bg-fundo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.box{
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel{
+    box-shadow: 3px 3px 10px black;
+    overflow: hidden;
+    height: 500px;
+    width: 300px;
+
+    & .container{
+        display: flex;
+        transition: transform .5s ease-in-out;
+        transform: translateX(0);
+    }
+
+    & img{
+        object-fit: cover;
+        height: 500px;
+        width: 300px;
+        object-fit: cover;
+    }
+}   
+
+.banner{
+    position: absolute;
+    top: 15%;
+    left: 50px;
+    perspective: 400px;
+    
+    &  img{
+        width: 400px;
+        transform: rotateY(45deg);
+
+    }
+
+}
+
+.banner-2{
+    position: absolute;
+    top: 15%;
+    right: 50px;
+    perspective: 400px;
+    
+    &  img{
+        width: 250px;
+        transform: rotateY(-45deg);
+        object-fit: cover;
+    }
+
+}
+
+
+
+@media screen and (max-width:1124px) {
+    .banner{
+        top: 15%;
+    }
+
+    .banner-2{
+        top: 160%; 
+    }
+
+    .box{
+        position: relative;
+        top: 63%;
+        z-index: 100;
+    }
+
+    body{
+        background-image: url('..//assets/bg-fundo-full.png');
+        background-position: top;
+        background-size: auto;
+    }
+}
+
