@@ -76,16 +76,30 @@ body{
 
 @media screen and (max-width:1124px) {
     .banner{
-        top: 15%;
+        top: 5%;
+        left: 5%;
+        perspective: 0;
+    
+        &  img{
+            transform: rotateY(0);
+            width: 90%;
+        }
     }
 
     .banner-2{
-        top: 160%; 
+        top: 110%; 
+        left: 25%;
+        perspective: 0;
+    
+        &  img{
+            transform: rotateY(0);
+            width: 90%;
+        }
     }
 
     .box{
         position: relative;
-        top: 63%;
+        top: 50%;
         z-index: 100;
     }
 
